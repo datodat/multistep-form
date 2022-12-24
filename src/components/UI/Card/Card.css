@@ -1,0 +1,11 @@
+.card {
+  width: 70%;
+  min-height: 70vh;
+  
+  background-color: var(--white);
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 1px 1px 6px var(--cool-gray);
+
+  display: flex;
+}
