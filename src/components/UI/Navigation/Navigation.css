@@ -22,7 +22,8 @@
 
 .step {
   margin-top: 14px;
-
+  padding-right: 56px;
+  padding-top: 22px;
   display: flex;
 }
 
