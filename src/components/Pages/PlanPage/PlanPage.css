@@ -1,0 +1,142 @@
+.plan-page {
+    padding-left: 86px;
+}
+  
+.plan-page > h3 {
+    font-size: 36px;
+    letter-spacing: 2px;
+    color: var(--marine-blue);
+
+    margin-top: 20px;
+}
+  
+.plan-page > p {
+    font-size: 16px;
+    letter-spacing: 1.6px;
+    color: var(--cool-gray);
+  
+    margin-top: 12px;
+}
+
+/* Plan div */
+
+.plan-page__plan-div {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 46px;
+}
+
+.plan-page__plan-div > div {
+    border: 1px solid var(--light-gray);
+    border-radius: 8px;
+    padding: 16px;
+
+    cursor: pointer;
+    transition: ease-out 0.3s;
+}
+.plan-page__plan-div > div:hover {
+    border-color: var(--purplish-blue) !important;
+}
+
+.plan-page__plan-div > div > h6 {
+    margin-top: 36px;
+    
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--marine-blue);
+    text-transform: capitalize;
+}
+
+.price {
+    color: var(--cool-gray);
+    letter-spacing: 1.6px;
+    margin-top: 4px;
+}
+
+.last-p {
+    color: var(--marine-blue);
+    margin-top: 4px;
+}
+
+/* Toggler */
+
+.toggler-div {
+    background-color: var(--magnolia);
+    padding: 16px;
+    border-radius: 12px;
+
+    margin-top: 36px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.toggler-span {
+    display: flex;
+    justify-content: space-between;
+    width: 55px;
+    padding: 8px;
+    background-color: var(--marine-blue);
+    margin: 0 16px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+.inner-span {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: transparent;
+}
+.inner-span.active {
+    background-color: var(--white);
+}
+
+.toggler-p {
+    color: var(--cool-gray);
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: capitalize;
+    transition: ease-out 0.3s;
+}
+.toggler-p.active {
+    color: var(--marine-blue) !important;
+}
+
+/* Buttons */
+
+.buttons-div {
+    margin-top: 86px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.go-back-btn {
+    border: none;
+    background: none;
+
+    padding: 8px;
+    color: var(--cool-gray);
+    cursor: pointer;
+    font-size: 18px;
+    letter-spacing: 1.6px;
+    font-weight: 700;
+    transition: ease-out 0.3s;
+}
+.go-back-btn:hover {
+    color: var(--marine-blue);
+}
+
+.next-step-btn {
+    background-color: var(--marine-blue);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    padding: 14px 20px;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+    cursor: pointer;
+}

@@ -12,23 +12,39 @@ const App = () => {
   const [page, setPage] = useState(1);
   const [pageData, setPageData] = useState({});
 
-  const pageHandler = p => {
+  const pageHandler = (p) => {
     setPage(p);
-  }
+  };
 
-  const infoPageHandler = infoData => {
+  // Infopage
+  const infoPageHandler = (infoData) => {
     setPageData({ ...pageData, infoData });
-    window.localStorage.setItem('name', infoData.name);
-    window.localStorage.setItem('email', infoData.email);
-    window.localStorage.setItem('phone', infoData.phone);
+    window.localStorage.setItem("name", infoData.name);
+    window.localStorage.setItem("email", infoData.email);
+    window.localStorage.setItem("phone", infoData.phone);
     setPage(2);
-  }
+  };
+
+  // Planpage
+  const planNextHandler = (planData) => {
+    setPageData({ ...pageData, planData })
+    setPage(3);
+  };
+
+  const planBackHandler = () => {
+    setPage(1);
+  };
 
   return (
     <div className="container">
       <Card pageHandler={pageHandler} activePage={page}>
         {page === 1 && <InfoPage infoPageHandler={infoPageHandler} />}
-        {page === 2 && <PlanPage />}
+        {page === 2 && (
+          <PlanPage
+            planNextHandler={planNextHandler}
+            planBackHandler={planBackHandler}
+          />
+        )}
         {page === 3 && <AddonsPage />}
         {page === 4 && <SummaryPage />}
       </Card>
