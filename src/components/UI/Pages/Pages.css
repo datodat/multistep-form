@@ -1,0 +1,68 @@
+.pages {
+    padding-left: 46px;
+    flex: 2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* .pages > div:nth-child(1) {
+
+} */
+
+.pages > div:nth-child(2) {
+    height: 100%;
+}
+
+.pages-header {
+    font-size: 36px;
+    letter-spacing: 2px;
+    color: var(--marine-blue);
+
+    margin-top: 20px;
+}
+
+.pages-header-p {
+    font-size: 16px;
+    letter-spacing: 1.6px;
+    color: var(--cool-gray);
+  
+    margin-top: 12px;
+}
+
+/* Buttons */
+.buttons-div {
+    margin-top: 86px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.go-back-btn {
+    border: none;
+    background: none;
+
+    padding: 8px;
+    color: var(--cool-gray);
+    cursor: pointer;
+    font-size: 18px;
+    letter-spacing: 1.6px;
+    font-weight: 700;
+    transition: ease-out 0.3s;
+}
+.go-back-btn:hover {
+    color: var(--marine-blue);
+}
+
+.next-step-btn {
+    background-color: var(--marine-blue);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    padding: 14px 20px;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+    cursor: pointer;
+}

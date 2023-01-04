@@ -3,10 +3,10 @@ import { useState } from "react";
 import "./App.css";
 // Components
 import Card from "./components/UI/Card/Card";
-import InfoPage from "./components/Pages/InfoPage/InfoPage";
-import PlanPage from "./components/Pages/PlanPage/PlanPage";
-import AddonsPage from "./components/Pages/AddonsPage/AddonsPage";
-import SummaryPage from "./components/Pages/SummaryPage/SummaryPage";
+import InfoPage from "./components/PageComponents/InfoPage/InfoPage";
+import PlanPage from "./components/PageComponents/PlanPage/PlanPage";
+import AddonsPage from "./components/PageComponents/AddonsPage/AddonsPage";
+import SummaryPage from "./components/PageComponents/SummaryPage/SummaryPage";
 
 const App = () => {
   const [page, setPage] = useState(1);

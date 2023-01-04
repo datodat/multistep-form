@@ -1,24 +1,8 @@
 .plan-page {
-    padding-left: 86px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-  
-.plan-page > h3 {
-    font-size: 36px;
-    letter-spacing: 2px;
-    color: var(--marine-blue);
-
-    margin-top: 20px;
-}
-  
-.plan-page > p {
-    font-size: 16px;
-    letter-spacing: 1.6px;
-    color: var(--cool-gray);
-  
-    margin-top: 12px;
-}
-
-/* Plan div */
 
 .plan-page__plan-div {
     display: flex;
@@ -28,6 +12,9 @@
 }
 
 .plan-page__plan-div > div {
+    width: 136px;
+    height: 184px;
+    
     border: 1px solid var(--light-gray);
     border-radius: 8px;
     padding: 16px;
@@ -102,41 +89,4 @@
 }
 .toggler-p.active {
     color: var(--marine-blue) !important;
-}
-
-/* Buttons */
-
-.buttons-div {
-    margin-top: 86px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.go-back-btn {
-    border: none;
-    background: none;
-
-    padding: 8px;
-    color: var(--cool-gray);
-    cursor: pointer;
-    font-size: 18px;
-    letter-spacing: 1.6px;
-    font-weight: 700;
-    transition: ease-out 0.3s;
-}
-.go-back-btn:hover {
-    color: var(--marine-blue);
-}
-
-.next-step-btn {
-    background-color: var(--marine-blue);
-    color: var(--white);
-    border: none;
-    border-radius: 8px;
-    padding: 14px 20px;
-    font-size: 18px;
-    font-weight: 700;
-    letter-spacing: 1.6px;
-    cursor: pointer;
 }
