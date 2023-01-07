@@ -28,13 +28,14 @@
     transition: ease-out 0.3s;
 }
 .addons-wrapper > div:hover {
-    border-color: var(--purplish-blue);
-    background-color: var(--magnolia);
+    border-color: var(--purplish-blue) !important;
 }
 
 .addons-wrapper > div > input {
     width: 25px;
     height: 25px;
+
+    cursor: pointer;
 }
 
 .addons-wrapper > div h6 {

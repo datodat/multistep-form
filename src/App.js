@@ -7,13 +7,19 @@ import InfoPage from "./components/PageComponents/InfoPage/InfoPage";
 import PlanPage from "./components/PageComponents/PlanPage/PlanPage";
 import AddonsPage from "./components/PageComponents/AddonsPage/AddonsPage";
 import SummaryPage from "./components/PageComponents/SummaryPage/SummaryPage";
+import ThanksPage from "./components/PageComponents/ThanksPage/ThanksPage";
 
 const App = () => {
   const [page, setPage] = useState(1);
   const [pageData, setPageData] = useState({});
 
-  const pageHandler = (p) => {
-    setPage(p);
+  const changePage = (direction, data) => {
+    if (direction === "back") {
+      setPage((i) => i - 1);
+    } else {
+      setPageData({ pageData, ...data });
+      setPage((i) => i + 1);
+    }
   };
 
   // Infopage
@@ -27,7 +33,7 @@ const App = () => {
 
   // Planpage
   const planNextHandler = (planData) => {
-    setPageData({ ...pageData, planData })
+    setPageData({ ...pageData, planData });
     setPage(3);
   };
 
@@ -37,16 +43,12 @@ const App = () => {
 
   return (
     <div className="container">
-      <Card pageHandler={pageHandler} activePage={page}>
-        {page === 1 && <InfoPage infoPageHandler={infoPageHandler} />}
-        {page === 2 && (
-          <PlanPage
-            planNextHandler={planNextHandler}
-            planBackHandler={planBackHandler}
-          />
-        )}
-        {page === 3 && <AddonsPage />}
-        {page === 4 && <SummaryPage />}
+      <Card activePage={page}>
+        {page === 1 && <InfoPage changePage={changePage} />}
+        {page === 2 && <PlanPage changePage={changePage} />}
+        {page === 3 && <AddonsPage changePage={changePage} />}
+        {page === 4 && <SummaryPage changePage={changePage} />}
+        {page === 5 && <ThanksPage />}
       </Card>
     </div>
   );

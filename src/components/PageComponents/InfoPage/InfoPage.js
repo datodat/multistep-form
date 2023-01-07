@@ -4,7 +4,7 @@ import Pages from "../../UI/Pages/Pages";
 import "./InfoPage.css";
 import "../../UI/Pages/Pages.css";
 
-const InfoPage = ({ infoPageHandler }) => {
+const InfoPage = ({ changePage }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -51,7 +51,7 @@ const InfoPage = ({ infoPageHandler }) => {
       setEmailError("");
       setPhoneError("");
 
-      infoPageHandler({ name, email, phone });
+      changePage("next", { name, email, phone });
 
       setName("");
       setEmail("");
@@ -70,7 +70,7 @@ const InfoPage = ({ infoPageHandler }) => {
       </div>
       {/* Form */}
       <div>
-        <form className="info-page__form" onSubmit={formHandler}>
+        <form className="info-page__form">
           <div className="info-page__wrapper">
             <div>
               <label htmlFor="name">name</label>
@@ -127,7 +127,7 @@ const InfoPage = ({ infoPageHandler }) => {
               )}
             </div>
           </div>
-          <button className="next-step-btn" type="submit">next step</button>
+          <button className="next-step-btn" onClick={formHandler}>Next Step</button>
         </form>
       </div>
     </Pages>

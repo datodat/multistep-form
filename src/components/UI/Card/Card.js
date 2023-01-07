@@ -6,7 +6,7 @@ const Card = (props) => {
   const classes = `card ${props.classes}`;
 
   return <div className={classes}>
-    <Navigation pageHandler={props.pageHandler} activePage={props.activePage} />
+    <Navigation activePage={props.activePage} />
     {props.children}
   </div>;
 };

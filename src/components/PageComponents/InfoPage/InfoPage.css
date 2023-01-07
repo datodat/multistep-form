@@ -42,6 +42,7 @@
 }
 .info-page__wrapper > div > input:focus {
   background-color: var(--magnolia);
+  border-color: var(--purplish-blue) !important;
 }
 .info-page__wrapper > div > input::placeholder {
   color: var(--cool-gray);
@@ -54,5 +55,6 @@
   top: 0;
   right: 0;
   font-size: 17px;
+  font-weight: 700;
   color: var(--strawberry-red);
 }

@@ -4,7 +4,7 @@ import Pages from "../../UI/Pages/Pages";
 import "../../UI/Pages/Pages.css";
 import "./AddonsPage.css";
 
-const AddonsPage = () => {
+const AddonsPage = ({ changePage }) => {
   const [services, setServices] = useState(false);
   const [storage, setStorage] = useState(false);
   const [profile, setProfile] = useState(false);
@@ -81,8 +81,8 @@ const AddonsPage = () => {
           </div>
         </div>
         <div className="buttons-div">
-          <button className="go-back-btn">Go Back</button>
-          <button className="next-step-btn">next step</button>
+          <button className="go-back-btn" onClick={() => changePage("back", { services, storage, profile })}>Go Back</button>
+          <button className="next-step-btn" onClick={() => changePage("next", { services, storage, profile })}>next step</button>
         </div>
       </div>
     </Pages>

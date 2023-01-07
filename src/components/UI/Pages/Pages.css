@@ -65,4 +65,9 @@
     font-weight: 700;
     letter-spacing: 1.6px;
     cursor: pointer;
+
+    transition: ease-out 0.3;
+}
+.next-step-btn:hover {
+    opacity: 0.8;
 }

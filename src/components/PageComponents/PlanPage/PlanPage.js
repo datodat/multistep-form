@@ -8,13 +8,9 @@ import arcadeLogo from "../../../images/icon-arcade.svg";
 import advancedLogo from "../../../images/icon-advanced.svg";
 import proLogo from "../../../images/icon-pro.svg";
 
-const PlanPage = ({ planNextHandler, planBackHandler }) => {
+const PlanPage = ({ changePage }) => {
   const [toggler, setToggler] = useState("monthly");
   const [plan, setPlan] = useState("arcade");
-
-  const handlePlanPage = () => {
-    planNextHandler({ plan, service: toggler });
-  };
 
   return (
     <Pages>
@@ -95,10 +91,10 @@ const PlanPage = ({ planNextHandler, planBackHandler }) => {
           </p>
         </div>
         <div className="buttons-div">
-          <button className="go-back-btn" onClick={planBackHandler}>
+          <button className="go-back-btn" onClick={() => changePage("back", { toggler, plan })}>
             go back
           </button>
-          <button className="next-step-btn" onClick={handlePlanPage}>
+          <button className="next-step-btn" onClick={() => changePage("next", { toggler, plan })}>
             next step
           </button>
         </div>
